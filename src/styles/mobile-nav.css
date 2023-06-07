@@ -1,0 +1,28 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.fa-bars {
+    font-size: 35px;
+    cursor: pointer;
+    color: #282825;
+}
+
+.RobCodesLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.RobCodesLogo p {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.RobCodesLogo img {
+    height: 30px;
+}
+
