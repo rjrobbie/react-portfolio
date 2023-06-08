@@ -1,9 +1,16 @@
+import '../styles/app.css'
 import MobileNav from './MobileNav';
 
 function App() {
   return (
     <div className="App">
-      <MobileNav />
+      <div className='desktop-nav'>
+
+      </div>
+      <div className='mobile-nav'>
+        <MobileNav />
+      </div>
+     
     </div>
   );
 }

@@ -11,6 +11,10 @@ nav {
     color: #282825;
 }
 
+.fa-xmark {
+    color: #c22121;
+}
+
 .RobCodesLogo {
     display: flex;
     align-items: center;
@@ -26,3 +30,11 @@ nav {
     height: 30px;
 }
 
+.MenuToggle {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .MenuToggle.open {
+    transform: rotate(-90deg);
+  }
+  
