@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import '../styles/mobile-nav.css'
+import React, { useState } from 'react';
+import MobileNavLinks from './MobileNavLinks';
+import '../styles/mobile-nav.css';
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import RobCodesLogo from '../assets/RobCodesLogo-Black.png'
+import RobCodesLogo from '../assets/RobCodesLogo-Black.png';
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,18 +14,23 @@ const MobileNav = () => {
 
   return (
     <nav>
-        <div className='RobCodesLogo'>
-            <img src={RobCodesLogo} alt="RobCodesLogo" />
-            <p>RobCodes</p>
-        </div>
-        <div className={`MenuToggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+      <div className='RobCodesLogo'>
+        <img src={RobCodesLogo} alt="RobCodesLogo" />
+        <p>RobCodes</p>
+      </div>
+      <div className={`MenuToggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <FontAwesomeIcon 
           className='fa-bars'
           icon={isOpen ? faXmark : faBars} 
         />
       </div>
+      {isOpen && (
+        <div className={`MobileNavLinksContainer open`}>
+          <MobileNavLinks />
+        </div>
+      )}
     </nav>
-  )
+  );
 }
 
-export default MobileNav
+export default MobileNav;

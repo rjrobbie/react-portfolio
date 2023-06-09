@@ -1,40 +1,63 @@
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-}
-
-.fa-bars {
+    z-index: 999;
+  }
+  
+  .fa-bars {
     font-size: 35px;
     cursor: pointer;
     color: #282825;
-}
-
-.fa-xmark {
+  }
+  
+  .fa-xmark {
     color: #c22121;
-}
-
-.RobCodesLogo {
+  }
+  
+  .RobCodesLogo {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.RobCodesLogo p {
+  }
+  
+  .RobCodesLogo p {
     font-weight: 600;
     font-size: 24px;
-}
-
-.RobCodesLogo img {
+  }
+  
+  .RobCodesLogo img {
     height: 30px;
-}
-
-.MenuToggle {
+  }
+  
+  .MenuToggle {
     transition: transform 0.3s ease-in-out;
   }
   
   .MenuToggle.open {
     transform: rotate(-90deg);
+  }
+  
+  .MobileNavLinksContainer {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #c22121;
+    transition: top 2.3s ease-in-out, height 87.3s ease-in-out;
+  }
+  
+  .MobileNavLinksContainer.open {
+    top: 60px; /* Adjust the top position based on your navigation bar's height */
+    height: calc(10vh - 54px); /* Adjust the height based on your navigation bar's height */
+    transition: top 3.3s ease-in-out, height 0.3s ease-in-out;
+    background-color: blue;
   }
   
